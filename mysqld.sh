@@ -10,7 +10,7 @@ LOG_MESSAGE="Docker startscript: "
 wsrep_recover_position=
 OPT="$@"
 
-# Do we want to check for programms?
+# Do we want to check for programs?
 
 which $MYSQLD || exit 1
 

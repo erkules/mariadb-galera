@@ -21,7 +21,7 @@ test -d /var/lib/mysql/mysql
 if [ $? != 0 ]; then
   mysql_install_db --user=mysql
   if [ $? != 0 ]; then
-    echo "${LOG_MESSAGE} Tried to install mysql.* schema because /var/lib/mysql seemed empty"
+    echo "${LOG_MESSAGE} Tried to install mysql.* schema because /var/lib/mysql/mysql is not a directory"
     echo "${LOG_MESSAGE} it failed :("
   fi
 fi

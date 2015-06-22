@@ -6,7 +6,7 @@
 # Variables
 
 MYSQLD=mysqld
-LOG_MESSAGE="Docker startscript: "
+LOG_MESSAGE="Docker startscript:"
 wsrep_recover_position=
 OPT="$@"
 

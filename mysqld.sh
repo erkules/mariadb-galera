@@ -15,7 +15,7 @@ OPT="$@"
 which $MYSQLD || exit 1
 
 # Check for mysql.* schema
-# If it does not exists we got to create it
+# If it does not exist we got to create it
 
 test -d /var/lib/mysql/mysql
 if [ $? != 0 ]; then

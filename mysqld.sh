@@ -57,4 +57,3 @@ exec $MYSQLD $OPT --wsrep_start_position=$wsrep_start_position
 
 echo "${LOG_MESSAGE} Uhh thats evil! How are you able to see this in your log?!"
 exit 1
-

@@ -1,5 +1,5 @@
-FROM ubuntu:14.04                                                                                                                                  
-ENV DEBIAN_FRONTEND noninteractive                                                                                                
+FROM ubuntu:14.04
+ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update &&  \
     apt-get install -y  software-properties-common && \
@@ -8,13 +8,13 @@ RUN apt-get update &&  \
     apt-get update && \
     apt-get install -y mariadb-galera-server galera
 
-COPY my.cnf /etc/mysql/my.cnf                                                                                                     
+COPY my.cnf /etc/mysql/my.cnf
 COPY mysqld.sh /mysqld.sh
 
 RUN chmod 555 /mysqld.sh
 
-# Define mountable directories.                                                                                                   
-VOLUME ["/var/lib/mysql"]                                                                                                         
+# Define mountable directories.
+VOLUME ["/var/lib/mysql"]
 
-# Define default command.                                                                                                         
-ENTRYPOINT ["/mysqld.sh"]                                                                                                             
+# Define default command.
+ENTRYPOINT ["/mysqld.sh"]

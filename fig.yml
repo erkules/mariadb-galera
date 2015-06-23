@@ -1,0 +1,18 @@
+galera1:
+  build: .
+  command: --wsrep-cluster-address=gcomm://
+  hostname: galera1
+
+galera2:
+  build: .
+  command: --wsrep-cluster-address=gcomm://galera1
+  hostname: galera2
+  links:
+    - galera1
+
+galera3:
+  build: .
+  command: --wsrep-cluster-address=gcomm://galera1
+  hostname: galera3
+  links:
+    - galera1
